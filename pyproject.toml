@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "asyncclick-repl"
+version = "0.1.0"
+description = "Command class to add REPL support to existing click groups"
+authors = ["Federico Jaite <fede_654_87@hotmail.com>"]
+license = "MIT"
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+asyncclick = "^8.0.1"
+prompt-toolkit = "^3.0.19"
+anyio = "^3.2.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+black = "^21.6b0"
+flake8 = "^3.9.2"
+mypy = "^0.910"
+pytest-asyncio = "^0.15.1"
+pytest-cov = "^2.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
