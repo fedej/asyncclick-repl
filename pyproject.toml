@@ -4,6 +4,18 @@ version = "0.1.0"
 description = "Command class to add REPL support to existing click groups"
 authors = ["Federico Jaite <fede_654_87@hotmail.com>"]
 license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: System :: Shells",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+repository = "https://github.com/fedej/asyncclick-repl"
 
 
 [tool.poetry.dependencies]
