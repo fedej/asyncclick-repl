@@ -25,7 +25,7 @@ prompt-toolkit = "^3.0.19"
 anyio = "^3.2.1"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.2"
+pytest = "^7.1"
 black = "^21.9b0"
 flake8 = "^4.0.1"
 mypy = "^0.910"
