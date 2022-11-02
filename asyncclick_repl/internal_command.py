@@ -1,6 +1,6 @@
 import subprocess
 from contextlib import contextmanager
-from typing import Optional, Any, List
+from typing import Any, List, Optional
 
 import anyio
 import asyncclick as click

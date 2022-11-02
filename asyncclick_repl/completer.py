@@ -1,11 +1,11 @@
 import shlex
-from typing import Iterable, AsyncGenerator, List, Tuple
+from typing import AsyncGenerator, Iterable, List, Tuple
 
 import asyncclick as click
-from asyncclick.shell_completion import ShellComplete, CompletionItem
+from asyncclick.shell_completion import CompletionItem, ShellComplete
 from prompt_toolkit.completion import (
-    Completer,
     CompleteEvent,
+    Completer,
     Completion,
     PathCompleter,
 )

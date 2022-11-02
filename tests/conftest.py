@@ -6,11 +6,8 @@ from prompt_toolkit.output import DummyOutput
 
 @pytest.fixture(autouse=True, scope="function")
 def mock_input():
-    pipe_input = create_pipe_input()
-    try:
-        output = DummyOutput()
-        output.fileno = lambda: 1
+    output = DummyOutput()
+    output.fileno = lambda: 1
+    with create_pipe_input() as pipe_input:
         with create_app_session(input=pipe_input, output=output):
             yield pipe_input
-    finally:
-        pipe_input.close()

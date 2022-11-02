@@ -1,7 +1,9 @@
 import shlex
-from typing import Any, Optional, List, Dict
+import traceback
+from typing import Any, Dict, List, Optional
 
 import asyncclick as click
+import asyncclick.exceptions
 from asyncclick.shell_completion import CompletionItem
 from prompt_toolkit import PromptSession
 from prompt_toolkit.history import InMemoryHistory
@@ -79,8 +81,12 @@ class AsyncREPL(click.Group):
                 )
             except click.ClickException as e:
                 e.show()
+            except asyncclick.exceptions.Exit as e:
+                raise e
             except SystemExit:
                 pass
+            except Exception:
+                traceback.print_exc()
 
     def shell_complete(
         self, ctx: click.Context, incomplete: str
