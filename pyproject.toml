@@ -1,43 +1,53 @@
-[tool.poetry]
+[project]
 name = "asyncclick-repl"
-version = "0.1.1"
+dynamic = ["version"]
 description = "Command class to add REPL support to existing click groups"
-authors = ["Federico Jaite <fede_654_87@hotmail.com>"]
+authors = [{ name = "fedej", email = "fede_654_87@hotmail.com" }]
 license = "MIT"
 readme = "README.md"
+requires-python = ">=3.8"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Framework :: AsyncIO",
     "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3 :: Only",
     "Topic :: System :: Shells",
     "Topic :: Software Development :: Build Tools",
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
-repository = "https://github.com/fedej/asyncclick-repl"
+dependencies = [
+    "asyncclick>=8.1.3.4,<9",
+    "prompt-toolkit>=3.0.43,<4.0.0",
+    "anyio>=4.2.0,<5.0.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.7"
-asyncclick = "^8.1.3.4"
-prompt-toolkit = "^3.0.31"
-anyio = "^3.2.1"
+[project.urls]
+"Source" = "https://github.com/fedej/aio-rom"
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.2.0"
-black = ">=22.10,<24.0"
-flake8 = "^5.0.4"
-mypy = "^0.982"
-pytest-asyncio = ">=0.20.1,<0.22.0"
-pytest-cov = "^4.0.0"
-isort = "^5.10.1"
+[project.optional-dependencies]
+dev = [
+    "bandit",
+    "black",
+    "flake8",
+    "flake8-bugbear",
+    "flake8-comprehensions",
+    "isort",
+    "mypy",
+    "pytest",
+    "pytest-asyncio"
+]
 
-[tool.pytest.ini_options]
-asyncio_mode = "auto"
+[tool.hatch.version]
+source = "vcs"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
 
 [tool.isort]
 profile = "black"
 
-[build-system]
-requires = ["poetry-core>=1.3.2"]
-build-backend = "poetry.core.masonry.api"
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
