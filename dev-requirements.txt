@@ -75,7 +75,7 @@ pytest==7.4.3
     # via
     #   asyncclick-repl (pyproject.toml)
     #   pytest-asyncio
-pytest-asyncio==0.23.2
+pytest-asyncio==0.23.3
     # via asyncclick-repl (pyproject.toml)
 pyyaml==6.0.1
     # via bandit
