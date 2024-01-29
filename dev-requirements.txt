@@ -20,7 +20,7 @@ exceptiongroup==1.2.0
     # via
     #   anyio
     #   pytest
-flake8==6.1.0
+flake8==7.0.0
     # via
     #   asyncclick-repl (pyproject.toml)
     #   flake8-bugbear
