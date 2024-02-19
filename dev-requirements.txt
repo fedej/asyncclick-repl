@@ -71,7 +71,7 @@ pyflakes==3.2.0
     # via flake8
 pygments==2.17.2
     # via rich
-pytest==7.4.3
+pytest==8.0.1
     # via
     #   asyncclick-repl (pyproject.toml)
     #   pytest-asyncio
