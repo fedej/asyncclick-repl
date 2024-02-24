@@ -6,7 +6,7 @@
 #
 anyio==4.2.0
     # via asyncclick-repl (pyproject.toml)
-asyncclick==8.1.3.4
+asyncclick==8.1.7.1
     # via asyncclick-repl (pyproject.toml)
 exceptiongroup==1.2.0
     # via anyio
